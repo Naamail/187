@@ -1,0 +1,61 @@
+:root {
+    --blue: #373e98;
+    --yellow: #ceb92c;
+    --pink: #f16775;
+    }
+
+
+* {
+    color: var(--pink);
+}
+
+h1 {
+    color: var(--blue);
+    font-size: 50px;
+}
+
+body {
+    /*color: var(--yellow);*/
+    background-image: url("Shvil.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.List1 {
+    background-color: var(--yellow);
+    color: var(--blue);
+}
+
+#important {
+    text-decoration: underline;
+    font-weight: bolder;
+}
+
+h1.List1 {
+    color: black;
+}
+
+a:link {
+    text-decoration: underline;
+    color: blue;
+    background-color: aqua;
+}
+
+a:visited {
+    text-decoration: underline;
+    color: rgb(71, 37, 71);
+    background-color: lightpink;
+}
+
+a:hover {
+    background-color: goldenrod;
+}
+
+a:active {
+    background-color: black;
+    color: white;
+}
+
+a[target="_blank"] {
+    color: antiquewhite;
+}
