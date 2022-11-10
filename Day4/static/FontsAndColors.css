@@ -1,0 +1,59 @@
+:root {
+    --BrightGreen: #beef00;
+    --ElectricRed: #ff0028;
+    --DeepGreen: #657a00;
+    --PowerBlue: #1400c6;
+}
+ 
+* {
+    font-family: hand;
+    padding: 1vw;
+    margin: 1vw;
+    border: 1px solid black;
+}
+
+body {
+    background-color: var(--BrightGreen);
+}
+
+/* this is loading a font that was downloaded locally*/
+@font-face {
+    font-family: hand;
+    src: url(./fonts/DancingScript-VariableFont_wght.ttf);
+}
+
+/* this is loading a font from google fonts*/
+@font-face {
+    src: url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Quicksand:wght@300&family=Roboto+Flex:opsz,wght@8..144,300;8..144,400;8..144,700&display=swap');
+    font-family: 'Montserrat', sans-serif;
+    font-family: Quicksand;
+    font-family: 'Roboto Flex', sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-areas: 
+    'header header header'
+    'menu main main'
+    'menu main main';
+}
+
+.item1 {
+    grid-area: header;
+    background-color: #657a00;
+    color: white;
+    height: 20vh;
+}
+
+.item2 {
+    grid-area: menu;
+    background-color: white;
+    height: 40vh;
+}
+
+.item3 {
+    grid-area: main;
+    background-color: #1400c6;
+    height: 40vh;
+}
+
