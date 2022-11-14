@@ -1,0 +1,80 @@
+* {
+    padding: 1vw;
+    margin: 1vw;
+}
+
+.container {
+    display: grid;
+    grid-template-areas: 'item1 item2';
+}
+
+.left {
+    grid-area: item1;
+    animation-name: blink;
+    animation-iteration-count: 5;
+    animation-duration: 1s;
+    height: 70vh;
+
+}
+
+.right {
+    grid-area: item2;
+    border-radius: 100%;
+    font-size: 45vh;
+    font-family: Arial, Helvetica, sans-serif;
+    /*this will center the element*/
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    text-align: center;
+    /**/
+    transform: rotate(0.5turn);
+    animation: spin 2s 5 ;
+}
+
+.video {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    text-align: center;
+}
+
+.typing-demo {
+    font-family: monospace;
+    font-size: 2em;
+    border-right: 2px solid black;
+    width: 22ch;
+    animation: blink2 1s infinite, typing 2s steps(22);
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+@media only screen and (max-width:600px) {
+    .container {
+        display: grid;
+        grid-template-areas: 'item1' 'item2';
+    }
+}
+
+@keyframes blink {
+    0% {background-color: white;}
+    50% {background-color: yellow;}
+    100% {background-color: white;}
+}
+
+@keyframes spin {
+    0% {transform: rotate(0turn);}
+    50% {transform: rotate(0.5turn);}
+    100% {transform: rotate(0.5turn);}
+
+}
+
+@keyframes blink2 {
+    50% {border-color: transparent;}
+}
+
+@keyframes typing {
+    from {width: 0;}
+    to {width:2;}
+    
+}
