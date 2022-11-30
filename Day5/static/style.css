@@ -45,7 +45,7 @@
     border-right: 2px solid black;
     width: 22ch;
     animation: blink2 1s infinite, typing 2s steps(22);
-    overflow: hidden;
+    overflow:hidden;
     white-space: nowrap;
 }
 

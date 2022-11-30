@@ -1,0 +1,50 @@
+* {
+    padding: 0.5vw;
+    margin: 0.5vw;
+}
+
+.container {
+    display: grid;
+    grid-template-areas: 
+    'header header'
+    'left right'
+    'footer footer';
+}
+
+.header {
+    grid-area: header;
+    background: radial-gradient(circle at 25%, yellow 10%,rgb(0, 255, 0),rgb(0, 251, 255), blue );
+    border-radius:1ch;
+    color: white;
+    text-align: center;
+    font-family: 'Oooh Baby', cursive;
+    font-size: xx-large;
+    
+}
+
+.left {
+    grid-area: left;
+    height: 50vh;
+    border: 5px solid;
+    border-image: linear-gradient(45deg, yellow, rgb(0, 255, 0), blue) 1;
+    border-radius:2ch;
+
+}
+
+.right {
+    grid-area: right;
+    height: 50vh;
+    border: 5px solid;
+    border-image: linear-gradient(45deg, blue, rgb(0, 255, 0), yellow) 1;
+    border-radius:10%;
+}
+
+.footer {
+    grid-area: footer;
+    background: radial-gradient(circle at 25%, yellow 10%,rgb(0, 255, 0),rgb(0, 251, 255), blue );
+    border-radius:1ch;
+    color: white;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: xx-large;
+}

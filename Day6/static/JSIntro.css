@@ -1,0 +1,37 @@
+* {
+    padding: 1vw;
+    border: 1px solid black;
+    margin: 1vw;
+}
+
+.container {
+    display: grid;
+    grid-template-areas: 
+    'header header' 
+    'left right';
+}
+
+.item1 {
+    grid-area: header;
+    height: 20vh;
+}
+
+.item2 {
+    grid-area: right;
+    height: 40vh;
+}
+
+.item3 {
+    grid-area: left;
+    height: 40vh;
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        display: grid;
+        grid-template-areas: 
+        'header' 
+        'left' 
+        'right';
+    }
+}
