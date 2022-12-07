@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="cleintSideJS.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <h1>GEOLOCATION APP</h1>
+    <nav>
+        <ul>
+            <li><a href="http://localhost:8200/">home</a></li>
+            <li><a href="http://localhost:8200/page2">page 2</a></li>
+        </ul>
+    </nav>
+    <button onclick="getLocation()">get GEOLOCATION</button>
+    <div id="demo"></div>
+    <form action="/page2" method="post">
+        <input class="hidden" id='long' type="text" name="long">
+        <input class="hidden" id="lat" type="text" name="lat">
+        <input type="submit" value="send GEOLOCATION">
+    </form>
+
+</body>
+</html>
