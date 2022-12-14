@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const bodyParser = require('body-parser');
-const port = 8200;
+const port = 8080;
 
 app.use(express.static('static'));
 app.use(express.json());
