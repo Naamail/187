@@ -19,8 +19,6 @@ app.get('/index', (req,res)=>{
     res.sendFile(path.join(__dirname, "views/index.html"));
     });
 
-
-
 //page2 route
 app.get('/page2',(req,res)=>{
     //res.send("Hi Guy!");

@@ -21,13 +21,12 @@ app.get('/', (req,res)=>{
 
 // route "page 2"
 app.post('/page2', (req,res)=>{
-    var body = req.body;
-    var UserLocation = {
-        "UserLong" : req.body.long ,
-        "UserLat" : req.body.lat
-    };    
-    console.log(body);
-    console.log(UserLocation);
+    
+    let values = [req.body.long, req.body.lat, new Date()];
+    //console.log(req);
+    console.log("this is req.body: ", req.body);
+    console.log(values);
+    
     res.sendFile(path.join(__dirname,'views/page2.html'));
     //res.send("hi express 2")
 });
