@@ -1,0 +1,29 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="mainCSS.css")
+        script(src="main.js" defer) 
+        title Naama Ilant Tzur
+    body
+        div(class="GridContainer")  
+            header(class="header") 
+                h1 
+                    a(href="/home") Naama Ilany Tzur
+                nav
+                    div#navLinks
+                        a(href="/home", class=(name === "home" ? "active" : undefined)) Home  
+                        a(href="/research", class=(name === "research" ? "active" : undefined)) Research 
+                        
+            div(class='block') 
+                block content 
+                br
+            
+            div(class="footer")
+                div(class="contactEmail") 
+                    p email me: 
+                    br
+                    |naamatzur@gmail.com
+                

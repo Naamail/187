@@ -1,0 +1,21 @@
+extends layout 
+block content  
+    h3 User behavior research
+    p Research interests: user behavior economics in the context 
+        | of privacy, security, and decision-making. 
+        br
+        | Methodological approach: digital experiments, primarily in 
+        | collaboration with hitech companies.
+    ul
+        each val in var1
+            li(class='itemTitle')= val.Title
+            div 
+                span= val.AbstractShort
+                span= val.AbsractLong
+                
+    br
+    br
+    br
+    br
+
+    

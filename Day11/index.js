@@ -1,31 +1,35 @@
-const express = require('express');
+const express = require("express");
 const app = express();
 const path = require('path');
 const BodyParser = require('body-parser');
-const sql = require('./db');
+const bodyParser = require("body-parser");
+const connection = require('./db');
 const CRUD = require('./CRUD');
-const port = 9090;
+const port = 8080;
 
-app.use(BodyParser.json());
-app.use(BodyParser.urlencoded({extended:true}));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended:true}));
+app.use(express.static('static'));
 
 
-//home page route
-app.get("/",(req,res)=>{
-    res.send("hi again");
+// home page route
+app.get('/', (req, res)=>{
+    res.sendFile(path.join(__dirname, "views/homePage.html"));
 });
 
-// get all customers route
-app.get('/customers', CRUD.selectAll);
+// signUp route
+app.post('/signUp', CRUD.signUptoDB);
 
-// cretae new customer form
-app.get("/CNCform", (req,res)=>{
-    res.sendFile(path.join(__dirname, "CNCustomer.html"));
-});
+// show all customers
+app.get('/showCustomers', CRUD.showAll);
 
-// insert new customer to DB
-app.post("/CNCfunction", CRUD.CNC);
+// create tables
+app.all('/createTables', CRUD.createTable)
 
+
+// set app to listen
 app.listen(port, ()=>{
     console.log("server is running on port " + port);
 })
+
+

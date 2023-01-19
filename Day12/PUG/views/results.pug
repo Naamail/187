@@ -1,0 +1,14 @@
+extends layout 
+block content 
+    h1 #{v1} 
+    table(class="results") 
+        tr  
+            th ID 
+            th email 
+            th name 
+        each i in resultsArray 
+            tr 
+            td=i.id
+            td=i.email 
+            td=i.name
+        
